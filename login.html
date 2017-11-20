@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Form</title>
+</head>
+<body>
+	<div id="app">
+		<h1>Just testing something...</h1>
+	</div>
+	<script type="text/javascript" src="build/react.js"></script>
+	<script type="text/javascript" src="build/react-dom.js"></script>
+	<script>
+		// 1. rendering a h1 tag without any attributes
+		// ReactDOM.render(
+		// 	React.DOM.h1(null, "Hello World!"),
+		// 	document.getElementById("app")
+		// );
+
+		// 2. rendering a h1 tag with attribute ID = my-heading
+		// ReactDOM.render(
+		// 	React.DOM.h1
+		// 	(
+		// 		{
+		// 			id: "my-heading",
+		// 		},
+		// 		"Hello World!"
+		// 	),
+		// 	document.getElementById("app")
+		// );
+
+		// 3. adding a span tag with boldness to the h1 tag
+		// ReactDOM.render(
+		// 	React.DOM.h1 (
+		// 		{
+		// 			id: "my-heading",
+		// 			className: "test",
+		// 			style:
+		// 			{
+		// 				background: "black",
+		// 				color: "white",
+		// 				fontFamily: "verdana",
+		// 				padding: "20px",
+		// 			}
+		// 		},
+		// 		React.DOM.span({id: "jspan"},
+		// 			React.DOM.em(null, "Hell"),
+		// 			"o"
+		// 		),
+		// 		" World!"
+		// 	),
+		// 	document.getElementById("app")
+		// );
+
+		// header with paragraph and a button
+		ReactDOM.render(
+			React.DOM.div(
+				{
+					style: {
+						width:"50%",
+						margin: "0 auto",
+					}
+				}, 
+				React.DOM.h1(
+					{
+						style: 
+						{
+							backgroundColor: "#000000",
+							color:"#ffffff",
+							textTransform: "uppercase",
+							letterSpacing: "1px",
+							textAlign: "center",
+							padding: "10px",
+						}
+					},
+				"Login"),
+				React.DOM.form(null, 
+					React.DOM.input(
+						{
+							type: "text", 
+							placeholder: "Email Address",
+							style: {
+								padding: "10px",
+								marginBottom: "10px",
+							}
+						}
+					),
+					React.DOM.br(),
+					React.DOM.input(
+						{
+							type: "password", 
+							placeholder: "Password",
+							style: {
+								padding: "10px",
+								marginBottom: "10px",
+							}
+						}
+					),
+					React.DOM.br(),
+					React.DOM.button({className:"btn", style: {padding: "10px",}}, "Submit"),
+				),
+				React.DOM.hr(),
+			),
+			document.getElementById("app")
+		);
+	</script>
+</body>
+</html>

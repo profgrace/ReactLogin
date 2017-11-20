@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Components</title>
+</head>
+<body>
+	<div id="app">
+		
+	</div>
+	<script type="text/javascript" src="build/react.js"></script>
+	<script type="text/javascript" src="build/react-dom.js"></script>
+	<script>
+		var Component = React.createClass({
+			render: function() {
+				return React.DOM.span(null, "I'm so custom!");
+			}
+		});
+		ReactDOM.render(
+			React.createElement(Component),
+			document.getElementById("app")
+		);
+	</script>
+</body>
+</html>
